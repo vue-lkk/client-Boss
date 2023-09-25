@@ -1,0 +1,19 @@
+// 使用antd-mobile中Grid栅格中跑马灯属性时报错：
+// [Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See <URL>
+// 解决：在style全局样式添加* {touch-action: pan-y;}， pan-y表示启用单指垂直平移手势(上下滑动事件)。
+* {
+    touch-action: pan-y;
+}
+.header{
+    margin-top: 0.45rem;
+}
+.header .am-list{
+    margin: 0.1rem;
+}
+.am-grid.am-grid-square .am-grid-item .am-grid-item-inner-content .am-grid-icon{
+    width: 50%!important;
+}
+.icon-header{
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,7 @@
+.message-container .am-list .am-list-body {
+  padding: 0;
+}
+.message-container .am-list .am-list-body .am-list-item img {
+  width: 45px;
+  height: 45px;
+}

@@ -1,0 +1,116 @@
+// 3D水珠样式
+.war_water {
+    display: flex;
+    justify-content: center;
+    height: 2.3rem;
+}
+
+.water {
+    position: absolute;
+    margin-top: 0.68rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.3rem;
+    text-align: center;
+    line-height: 1.5rem;
+    color: rgb(255, 255, 255);
+    /* 生成不规则的矩形，下面是网站地址 */
+    /* https://9elements.github.io/fancy-border-radius/ */
+    // border: 1px solid #000;
+    border-radius: 30% 70% 62% 70%;
+    -webkit-box-shadow: inset 10px 20px 30px rgba(0, 0, 0, 0.5),
+        10px 10px 20px rgba(0, 0, 0, 0.3),
+        15px 15px 30px rgba(0, 0, 0, 0.05),
+        inset -10px -10px 15px rgba(255, 255, 255, 0.8);
+    -webkit-animation: action 3s linear infinite;
+}
+
+.water:nth-child(2) {
+    position: absolute;
+    margin-top: 1.7rem;
+    margin-left: 0.5rem;
+    width: .5rem;
+    height: .5rem;
+    transform:rotateZ(-70deg);
+    background: rgba(102,205,37,0.5);
+    animation-delay: 3s;
+}
+.water:nth-child(2)::after,.water:nth-child(2)::before{
+    display: none;
+}
+
+.water:nth-child(3) {
+    position: absolute;
+    margin-top: 1.7rem;
+    margin-left: 1rem;
+    width: .5rem;
+    height: .5rem;
+    transform:rotateZ(14deg);
+    background: rgba(102,205,37,0.5);
+    animation-delay: 1s;
+}
+.water:nth-child(3)::after,.water:nth-child(3)::before{
+    display: none;
+}
+
+.water:nth-child(4) {
+    position: absolute;
+    margin-top: 1.2rem;
+    margin-left: 1.6rem;
+    width: .5rem;
+    height: .5rem;
+    transform:rotateZ(60deg);
+    background: rgba(102,205,37,0.5);
+    animation-delay: 2s;
+}
+.water:nth-child(4)::after,.water:nth-child(4)::before{
+    display: none;
+}
+
+
+
+.water::after {
+    content: '';
+    width: 0.2rem;
+    height: 0.2rem;
+    position: absolute;
+    top: 0.05rem;
+    left: 0.1rem;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 100% 0% 100% 0% / 100%;
+}
+
+.water::before {
+    content: '';
+    width: 0.1rem;
+    height: 0.1rem;
+    position: absolute;
+    top: 0.15rem;
+    left:0.3rem;
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 41% 59% 64% 36% / 75%;
+}
+
+@keyframes action {
+    25% {
+        border-radius: 24% 76% 29% 55% ;
+    }
+
+    50% {
+        border-radius: 30% 70% 62% 65% ;
+    }
+
+    100% {
+        border-radius: 24% 76% 29% 70% ;
+    }
+}
+
+
+// NavBar样式
+.am-navbar{
+    height: 0.45rem;
+    box-shadow: 0px 0.13rem 0.29rem 0.08rem #2dcbc3;
+}
+.am-navbar-title{
+    font-size: 0.18rem;
+}
